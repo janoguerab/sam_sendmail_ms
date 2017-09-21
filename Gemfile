@@ -45,3 +45,4 @@ gem 'execjs'
 
 #Carrierwave
 gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-base64'

@@ -1,3 +1,3 @@
 class SentMail < ApplicationRecord
-	mount_uploader :attachment, AttachmentUploader
+	mount_base64_uploader :attachment, AttachmentUploader
 end

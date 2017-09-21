@@ -18,6 +18,7 @@ class SentMailsController < ApplicationController
     @sent_mail = SentMail.new(sent_mail_params)
 
     if @sent_mail.save
+      
       render json: @sent_mail, status: :created, location: @sent_mail
     else
       render json: @sent_mail.errors, status: :unprocessable_entity
