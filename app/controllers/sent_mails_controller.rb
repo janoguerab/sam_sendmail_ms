@@ -10,7 +10,11 @@ class SentMailsController < ApplicationController
 
   # GET /sent_mails/1
   def show
-    render json: @sent_mail
+    if @sent_mail.nil?
+      render json: { message:"Explosion!", status: 404}.to_json
+    else
+      render json: @sent_mail
+    end
   end
 
   # POST /sent_mails

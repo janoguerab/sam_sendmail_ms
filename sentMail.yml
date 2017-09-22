@@ -17,7 +17,7 @@ consumes:
 produces:
   - application/json
 paths:
-  /sentMail:
+  /sent_mails:
     post:
       summary: Creates a new mail to Sent
       operationId: createMail
@@ -66,7 +66,7 @@ paths:
           description: Internal Server Error
           schema:
             $ref: '#/definitions/ErrorModel'
-  '/sentMail/{id}':
+  '/sent_mails/{id}':
     get:
       summary: Returns a sent mail with the given id
       operationId: getSentMailById
@@ -153,64 +153,56 @@ definitions:
     properties:
       id:
         type: integer
-      Sender:
+      sender:
         type: string
-      Recipient:
+      recipient:
         type: string
-      Cc:
-        type: array
-        items:
-          type: string
-      Distribution_list:
-        type: array
-        items:
-          type: string
-      Subject:
+      cc:
         type: string
-      Message_body:
+      distribution_list:
         type: string
-      Attachments:
+      subject:
         type: string
-      Sent_dateTime:
+      message_body:
         type: string
-      Created_dateTime:
+      attachments:
         type: string
-      Daft:
+      sent_dateTime:
+        type: string
+      created_dateTime:
+        type: string
+      daft:
         type: boolean
-      Urgent:
+      urgent:
         type: boolean
-      Confirmation:
+      confirmation:
         type: boolean
   SentMailWithoutId:
     type: object
     properties:
-      Sender:
+      sender:
         type: string
-      Recipient:
+      recipient:
         type: string
-      Cc:
-        type: array
-        items:
-          type: string
-      Distribution_list:
-        type: array
-        items:
-          type: string
-      Subject:
+      cc:
         type: string
-      Message_body:
+      distribution_list:
         type: string
-      Attachments:
+      subject:
         type: string
-      Sent_dateTime:
+      message_body:
         type: string
-      Created_dateTime:
+      attachments:
         type: string
-      Daft:
+      sent_dateTime:
+        type: string
+      created_dateTime:
+        type: string
+      daft:
         type: boolean
-      Urgent:
+      urgent:
         type: boolean
-      Conformation:
+      conformation:
         type: boolean
   SentMailsList:
     type: object
